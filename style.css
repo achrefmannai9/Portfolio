@@ -212,8 +212,8 @@ footer {
 
 .video-container {
     position: relative;
-    width: 100%;
-    max-width: 100px; /* أقصى عرض للفيديو */
+    width: 50%;
+    max-width: 300px; /* أقصى عرض للفيديو */
     margin: 20px auto;
     padding-bottom: 56.25%; /* يحافظ على أبعاد الفيديو القياسية 16:9 */
     height: 0;
