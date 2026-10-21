@@ -212,7 +212,7 @@ footer {
 
 .video-container {
     width: 100%;
-    max-width: 280px;
+    max-width: 380px;
     margin: 20px auto;
     aspect-ratio: 16 / 9;
     overflow: hidden;
