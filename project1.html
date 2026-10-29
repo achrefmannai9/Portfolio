@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Achref | CNC-Zeichenmaschine</title>
+        <link rel="icon" type="image/png" href="background/logo.webp">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="inner-page1">
+        <header class="hero">
+            <div class="brand-container">
+                <h1>CNC-Zeichenmaschine</h1>
+            </div>
+        </header>
+        
+        <main>
+            <div class="main-project">
+                <h2>Modell 4 :</h2>
+                <h3>Projektüberblick :</h3>
+                
+                <div class="videos-row-vertical">
+                    <div class="video-container-vertical">
+                        <iframe src="https://youtu.be/6if" 
+                            title="Modell 4" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="video-container-vertical">
+                        <iframe src="https://youtu.be/6if" 
+                            title="Modell 4" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="write">
+                    <p>
+                        Die vierte Version stellt eine Weiterentwicklung in jeder Hinsicht gegenüber der ersten, 
+                        zweiten und dritten Version dar, da sie nicht nur eine hohe Genauigkeit, sondern auch eine sehr 
+                        hohe Geschwindigkeit und ein hohes Drehmoment dank <strong>zwei Motoren</strong> vom Typ 
+                        <strong>NEMA34</strong> aufweist. Darüber hinaus wurden die Abmessungen vergrössert, 
+                        sodass die Maschine nun mit Abmessungen von <strong>vierzig</strong> zu 
+                        <strong>vierzig Zentimetern</strong> zeichnen kann. Im Gegensatz zu den vorherigen Versionen, 
+                        die über <strong>ein Kabel</strong> mit <strong>dem Computer</strong> verbunden werden, 
+                        erfolgt die Steuerung bei dieser Version drahtlos über <strong>Bluetooth</strong>.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc4_mec1.webp" alt="Modell 4" width="440">
+                    <img src="photo_proj_1/cnc4_mec2.webp" alt="Modell 4" width="400">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur genauen und hochtourigen Bewegung der Achsen wurde für beide Achsen 
+                        <strong>ein gezahnter Riemen</strong> verwendet.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc4_elec1.webp" alt="Modell 4" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Für den ordnungsgemässen Betrieb der Maschine wurde ein Netzteil mit einem Ausgang von 
+                        <strong>vierundzwanzig Volt</strong> und <strong>fünf Ampere</strong> zur Versorgung 
+                        <strong>der grossen Schrittmotoren</strong> installiert. Zudem wurde <strong>ein Transformator</strong> 
+                        zur separaten Versorgung der Steuerschaltung unabhängig von <strong>den Motoren</strong> 
+                        eingesetzt, da <strong>die grossen Motoren</strong> einen hohen Strom ziehen, was die 
+                        Steuerschaltung beeinträchtigt. Der verwendete <strong>Transformator</strong> verfügt über 
+                        zwei Ausgänge, um <strong>den Servomotor</strong> separat von der Steuerschaltung versorgen 
+                        zu können, da eines der Probleme der vorherigen Versionen der Spannungsabfall aufgrund 
+                        der Versorgung <strong>des Motors</strong> und der Steuerschaltung aus derselben Spannungsquelle 
+                        war, was beim Einschalten <strong>des Motors</strong> einen Reset der Steuerschaltung verursachte.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc4_elec2.webp" alt="Modell 4" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        <strong>Die drehmomentstarken Motoren</strong> vom Typ <strong>NEMA34</strong> arbeiten nicht 
+                        mit einer konstanten Spannung wie <strong>die Motoren</strong> der vorherigen Versionen, 
+                        sondern es handelt sich um <strong>Hybridmotoren</strong>, die mit einem konstanten Strom 
+                        betrieben werden. Daher ist <strong>ein Treibermodul</strong> vom Typ <strong>TB6600</strong> 
+                        erforderlich, das <strong>diesem Motor</strong> einen konstanten und hohen Strom liefert. 
+                        Für <strong>jeden Motor</strong> ist <strong>ein Treibermodul</strong> vom Typ <strong>TB6600</strong> 
+                        vorhanden, und es gibt <strong>einen Servomotor</strong> mit einer von der Steuerschaltung 
+                        unabhängigen Stromversorgung, um das Problem des Spannungsabfalls und des Resets zu lösen. 
+                        Um die Anzahl <strong>der Kabel</strong> zu reduzieren und die Distanz zu vergrössern, wurde 
+                        <strong>ein Bluetooth Modul</strong> ohne jegliche Änderung des Programmcodes hinzugefügt. 
+                        Die Steuerung in den vorherigen Versionen erfolgt über <strong>ein USB Kabel</strong>, welches 
+                        <strong>das UART Protokoll</strong> verwendet, das zwei Leitungen für Senden und Empfangen 
+                        benötigt. Daher wurde <strong>ein Bluetooth Modul</strong> vom Typ <strong>HC05</strong> 
+                        eingesetzt, da es mit <strong>dem UART Protokoll</strong> arbeitet und dies keinen Unterschied 
+                        für <strong>den Arduino</strong> darstellt.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc4_elec3.webp" alt="Modell 4" width="800">
+                </div>
+
+                <div class="write">
+                    <p>
+                        In der vorherigen Version wurden <strong>Tasten</strong> zur manuellen Steuerung der Achsen 
+                        hinzugefügt, dies erfordert jedoch Zeit und Aufwand. Daher wurden <strong>induktive Sensoren</strong> 
+                        eingesetzt, um <strong>den Nullpunkt</strong> präzise und mit <strong>einem einzigen Klick</strong> 
+                        vom <strong>Computer</strong> aus einzustellen. Die Achsen bewegen sich auf der Suche nach 
+                        <strong>dem Nullpunkt</strong>, und beim Erfassen durch <strong>den Sensor</strong> stoppt 
+                        die Achse und betrachtet <strong>diesen Punkt</strong> als <strong>Startpunkt</strong>. 
+                        Der Ausgang <strong>der Sensoren</strong> beträgt <strong>vierundzwanzig Volt</strong>, 
+                        weshalb <strong>ein Relais</strong> verwendet wurde, das mit <strong>vierundzwanzig Volt</strong> 
+                        arbeitet und ein schwaches Signal an <strong>den Arduino</strong> sendet.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc4_elec4.webp" alt="Modell 4" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        <strong>Der Hybridmotor</strong> vom Typ <strong>NEMA34</strong> ist 
+                        <strong>ein bipolarer Motor</strong>, weshalb er mit vier Drähten an 
+                        <strong>den Treibermodul TB6600</strong> angeschlossen wird und in einem breiten Spannungsbereich 
+                        von neun bis zweiundvierzig Volt arbeiten kann, wobei in diesem Fall vierundzwanzig Volt 
+                        verwendet wurden. Zusätzlich zur Trennung des Leistungskreises vom Steuerkreis über einen sehr 
+                        schnellen <strong>Optokoppler</strong> kann dieser Treiber bei fehlendem Signal einen relativ 
+                        geringen Strom in <strong>die Motorwicklungen</strong> einspeisen, wodurch 
+                        <strong>der Motor</strong> wie eine Bremse fixiert wird. Darüber hinaus verfügt 
+                        <strong>dieser Treiber</strong> über <strong>Tasten</strong> zur Einstellung der Auflösung, 
+                        wodurch festgelegt wird, wie weit sich <strong>der Motor</strong> bei jedem Schritt bewegt, 
+                        und in diesem Fall wurde die höchste Auflösung gewählt, damit sich <strong>der Motor</strong> 
+                        bei jedem Impuls um einen sehr kleinen Winkel dreht.
+                    </p>
+                </div>
+
+                <h2>Modell 3 :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/DJr7rbKksjw?si=cvotOUT_kGWUsVDw" 
+                        title="Modell 3" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die zweite Version ist gross, entbehrt jedoch an Genauigkeit, da die Achsen ungenau sind. 
+                        Daher wurde die dritte Version entwickelt, um eine sehr hohe Genauigkeit aufzuweisen, 
+                        unter Beibehaltung der grossen Abmessungen, und diese Version enthält <strong>Tasten</strong> 
+                        zur manuellen Steuerung der Achsen.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc3_mec1.webp" alt="Modell 3" width="600">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die erste Achse wird von <strong>einem Motor</strong> und <strong>einem gezahnten Riemen</strong> 
+                        angetrieben, um ein Durchrutschen zu verhindern, während die zweite Achse aus einer Walze besteht, 
+                        die <strong>das Papier</strong> bewegt, auf das gezeichnet wird, wodurch eine sehr hohe 
+                        Genauigkeit erzielt wird.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc3_elec1.webp" alt="Modell 3" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die <strong>Motorsteuerung</strong> entspricht der der zweiten Version, jedoch gibt es eine 
+                        neue Ergänzung, die darin besteht, dass die Achsen manuell über <strong>Tasten</strong> an 
+                        der Maschine bewegt werden können, wodurch der Startpunkt des Zeichnens manuell ausgewählt 
+                        werden kann.
+                    </p>
+                </div>
+
+                <h2>Modell 2 :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jRDHyVwHnPo?si=op7kgLVRK8oiHpQo" 
+                        title="Modell 2" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die erste Version wurde zu einer <strong>neuen</strong> und <strong>grossen</strong> Version 
+                        mit einer Abmessung von <strong>fünfundzwanzig</strong> zu 
+                        <strong>fünfundzwanzig Zentimetern</strong> weiterentwickelt.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc2_mec1.webp" alt="Modell 2" width="600">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Es wurden <strong>zwei unipolare Schrittmodoren</strong> und <strong>ein Riemenscheiben</strong> 
+                        und <strong>Riemen System</strong> verwendet, wobei <strong>der Riemen</strong> gezahnt sein muss, 
+                        um ein Durchrutschen zu verhindern. Die Maschine besteht aus Holz, während die Teile, bei denen 
+                        aufgrund der Bewegung Reibung entsteht, aus <strong>Metall</strong> sind.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc2_elec1.webp" alt="Modell 2" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Es wurde <strong>ein Arduino</strong> zur Steuerung verwendet, und da es sich um 
+                        <strong>zwei unipolare Motoren</strong> handelt, war die Verwendung von 
+                        <strong>zwei Treiberschaltungen</strong> des Typs ULN2003 erforderlich.
+                    </p>
+                </div>
+
+                <h2>Modell 1 :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container-vertical">
+                    <iframe src="https://www.youtube.com/embed/UvxY0FKIXP4?si=jwa4B5EbW-ifjIB4" 
+                        title="Modell 1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Dieses Projekt ist ein Prototyp <strong>einer CNC-Zeichen</strong> und Schreibmaschine, 
+                        die sich durch ein integriertes mechanisches Design auszeichnet, das die präzise Ausführung von 
+                        Formen und Zeichnungen basierend auf den übermittelten Daten ermöglicht.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc1_mec1.webp" alt="Modell 1" width="600">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die Mechanik der Maschine besteht aus drei Hauptachsen; die erste Achse enthält 
+                        <strong>einen bipolaren Schrittmotor</strong> und <strong>ein Spindelmutter-System</strong> 
+                        zur Gewährleistung präziser Bewegungen, während die zweite Achse 
+                        <strong>einen unipolaren Schrittmotor</strong> und <strong>ein Zahnstangen-System</strong> 
+                        für horizontale Bewegungen umfasst. Die dritte Achse enthält <strong>einen Servomotor</strong>, 
+                        der speziell dafür vorgesehen ist, den Schreib und Zeichenstift reibungslos anzuheben und 
+                        abzusenken.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_1/cnc1_elec1.webp" alt="Modell 1" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur Steuerung dieser Maschine ist ein Vermittler zwischen <strong>dem Computer</strong>
+                         und <strong>den Motoren</strong> erforderlich, bei dem es sich um <strong>das Arduino Board</strong> 
+                         handelt, das die digitalen Signale vom Computer in präzise Bewegungen übersetzt. 
+                         Da <strong>das Arduino</strong> nicht in der Lage ist, <strong>die Motoren</strong> direkt 
+                         anzusteubern, wurde <strong>eine Schaltung (L293D)</strong> für <strong>den bipolaren Motor</strong> 
+                         und <strong>eine weitere Schaltung (ULN2003)</strong> für <strong>den unipolaren Motor</strong> 
+                         verwendet, während <strong>der Servomotor</strong> ausschließlich ein Pulsweitenmodulationssignal 
+                         benötigt. Die Verbindung zum Computer erfolgt über <strong>ein USB Kabel</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="projects-container">
+                <h2>Andere Projekte</h2>
+                <div class="projects-grid">
+
+                    <div class="project-card home-card">
+                        <h3>Startseite</h3>
+                        <a href="index.html" class="btn btn-home">Zur Startseite</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>2. Interaktive Roboter und IoT</h3>
+                        <a href="project2.html" class="btn">Details anzeigen</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>3. Autonome und Ferngesteuerte Fahrzeuge</h3>
+                        <a href="project3.html" class="btn">Details anzeigen</a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>4. Meine ersten Erfindungen</h3>
+                        <a href="project4.html" class="btn">Details anzeigen</a>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>Kontakt & Links:</strong></p>
+                <div class="contact-links">
+                    <a href="mailto:mannaiachref9@gmail.com">📧 E-Mail</a>
+                    <a href="tel:+21627236313">📞 Tel</a>
+                    <a href="https://www.linkedin.com/in/achref-mannai-73324121a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/achrefmannai9" target="_blank">💻 GitHub</a>
+                </div>
+                <p class="copyright">© 2026 Achref | Alle Rechte vorbehalten</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
