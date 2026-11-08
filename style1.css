@@ -288,7 +288,7 @@ a {
         min-height: 100vh;
         padding: 120px 5% 50px 5%;
         gap: 30px;
-        text-align: center;
+        text-align: justify;
     }
 
     /* تعديل حجم ولإبقاء النصوص مريحة للقراءة ومتناسقة */
