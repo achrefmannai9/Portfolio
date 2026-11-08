@@ -267,62 +267,86 @@ a {
 }
 
 /* ========================================= */
-/* التوافق مع الهواتف والأجهزة اللوحية (Responsive) */
+/* التوافق التام مع الهواتف والأجهزة اللوحية (Responsive) */
 /* ========================================= */
 
 @media (max-width: 992px) {
-    /* تصغير هوامش الصفحة العامة لتناسب الشاشات الصغيرة */
+    /* 1. ضبط الحواشي العامة للصفحة */
     .navbar {
         padding: 20px 5%;
     }
 
-    /* إخفاء القائمة العلوية التقليدية على الهواتف (يمكن تطويرها لاحقاً بـ Hamburger Menu) */
+    /* إخفاء القائمة العلوية التقليدية على الهواتف */
     .navbar ul {
         display: none; 
     }
 
-    /* جعل أقسام الموقع تعرض العناصر فوق بعضها عمودياً بدلاً من جنب لجنب */
+    /* 2. ضبط الأقسام الرئيسية لتظهر عمودياً دون تداخل */
     .home {
-        flex-direction: column-reverse;
+        flex-direction: column; /* جعل النصوص أولاً ثم الصورة تحتها تماماً بشكل مرتب */
         justify-content: center;
+        align-items: center;
         height: auto;
         min-height: 100vh;
-        padding: 120px 5% 50px 5%;
-        gap: 30px;
+        padding: 100px 5% 50px 5%;
+        gap: 40px;
         text-align: center;
     }
 
-    /* تعديل حجم ولإبقاء النصوص مريحة للقراءة ومتناسقة */
+    /* 3. تنسيق نصوص الصفحة الرئيسية لتكون في المنتصف */
+    .home-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
     .home-info h1 {
-        font-size: 38px;
+        font-size: 34px;
     }
 
     .home-info h2 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .home-info p {
         font-size: 14px;
-        text-align: center; /* توسيط النصوص على الهاتف ليبدو المنظر أجمل */
+        text-align: center;
     }
 
-    /* تعديل أزرار الصفحة لتصبح متمركزة */
+    /* 4. ضمان ظهور الأزرار وإرجاع مسافاتها بشكل صحيح */
     .home-info .btn-sci {
+        display: flex;
         justify-content: center;
-        gap: 20px;
+        align-items: center;
+        gap: 15px;
         flex-wrap: wrap;
+        margin-top: 20px;
+        width: 100%;
     }
 
-    /* تصغير حجم صورة الملف الشخصي لتناسب شاشة الهاتف */
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* 5. توسيط صورة الملف الشخصي داخل الدائرة الدوارة بدقة */
+    .home-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
     .home-img .img-box {
-        width: 65vw;
-        height: 65vw;
-        max-width: 250px;
-        max-height: 250px;
+        width: 260px;
+        height: 260px;
+        max-width: 80vw;
+        max-height: 80vw;
         margin: 0 auto;
     }
 
-    /* إصلاح مسافة الـ Footer مع الأقسام */
+    /* إصلاح تداخل الـ Footer مع المحتوى */
     footer {
         margin-top: 0;
     }
