@@ -298,7 +298,6 @@ a {
     .home-info p {
         font-size: 14px;
         text-align: justify;
-        text-align: center; /* توسيط النصوص على الهاتف ليبدو المنظر أجمل */
     }
 
     /* تعديل أزرار الصفحة لتصبح متمركزة */
