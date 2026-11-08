@@ -273,6 +273,7 @@ a {
     /* تصغير هوامش الصفحة العامة لتناسب الشاشات الصغيرة */
     .navbar {
         padding: 20px 5%;
+        font-size: 15px
     }
 
     .navbar ul li a {
