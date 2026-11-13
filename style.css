@@ -325,46 +325,33 @@ footer {
 }
 
 
-/* ========================================================= */
-/* 📱 الاستجابة للهواتف والشاشات الصغيرة (Media Query) */
-/* ========================================================= */
+/* حل جذري لتوسيط المحتوى وملء الشاشة على الهواتف */
 @media (max-width: 850px) {
-    /* إلغاء التثبيت الجانبي وتنسيق الصفحة عمودياً */
-
-    main, .content-container {
-        width: 100%;
-        margin-left: 15px;
-        padding: 15px;
+    /* اجعل العنصر الحاوي الرئيسي يمتلئ بالكامل ويتوسط الشاشة */
+    body {
+        width: 100% !important;
+        overflow-x: hidden !important;
     }
 
-    main, .main-project {
-        width: 100%;
-        margin-left: 15px;
+    /* إزالة أي هوامش يسارية تفوق عرض الهاتف وتزاحم المحتوى لليسار */
+    .home-project h2, 
+    .home-project h3, 
+    .home-project h5, 
+    .home-project p {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+        width: auto !important;
+        max-width: 100% !important;
+        text-align: left !important;
     }
 
-    /* تكيف خطوط الهيدر مع شاشة الهاتف */
-    .hero {
-        width: 100%;
-    }
-
-    .home-project {
-        width: 100%;
-    }
-    .hero h1, .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero .subtitle {
-        font-size: 1.1rem;
-    }
-
-    .logo-dim {
-        width: 70px;
-        height: 70px;
-    }
-
-    .main-project p {
-        margin-left: 20px;
+    /* توسيط معرض الصور بالكامل وتجنب خروجه لليسار */
+    .project-gallery {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 10px auto !important;
+        width: 100% !important;
     }
 }
 
