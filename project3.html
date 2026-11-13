@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Achref | Autonome und Ferngesteuerte Fahrzeuge</title>
+        <link rel="icon" type="image/png" href="background/logo.webp">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="inner-page3">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><strong>Startseite</strong></a>
+            <ul>
+                <li><a href="project0.html">Home</a></li>
+                <li><a href="project1.html">CNC</a></li>
+                <li><a href="project2.html">Interaktiv Roboter</a></li>
+                <li class="active"><a href="#"><strong>Fahrzeug</strong></a></li>
+                <li><a href="project4.html">Erste Projekte</a></li>
+            </ul>
+        </nav>
+        <header class="hero">
+            <div class="brand-container">
+                <h1>Autonome und Ferngesteuerte Fahrzeuge</h1>
+            </div>
+        </header>
+        
+        <main>
+            <div class="main-project">
+                <h2>Autonomes Fahrzeug :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/whfH1ExQSUY?si=iYiG7J9Yf8671pHM" 
+                        title="Autonomes Fahrzeug" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Dieser Roboter ist ein <strong>selbstfahrendes Auto</strong>, das vorne mit einer <strong>Kamera</strong> 
+                        ausgestattet ist, die die <strong>Ampel</strong> erkennen kann. Wenn das <strong>Licht rot</strong> ist, 
+                        hält das Auto an und schaltet die <strong>Bremslichter</strong> ein. Wenn die <strong>Ampel</strong> auf 
+                        <strong>grün</strong> wechselt, setzt das Auto seine Fahrt fort.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/selfcar_mec1.webp" alt="Autonomes Fahrzeug" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Auto besteht zu hundert Prozent <strong>handgefertigt</strong> aus Holz, unter Hinzufügung eines 
+                        <strong>Lenksystems</strong> für die Räder nach rechts und links wie bei einem echten Auto. Zur Bewegung 
+                        dieses Systems wurde ein <strong>Servomotor</strong> eingebaut. Das Auto bewegt sich vorwärts und 
+                        rückwärts mithilfe eines <strong>Gleichstrommotors</strong> und eines <strong>Getriebesatzes</strong> zur 
+                        Senkung der <strong>Motordrehzahl</strong> und Erhöhung des <strong>Drehmoments</strong>.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/selfcar_elec1.webp" alt="Autonomes Fahrzeug" width="800">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Gehirn des Autos ist ein <strong>Raspberry Pi</strong>, und seine Augen sind eine <strong>USB Kamera</strong>, 
+                        die das Gesehene an den <strong>Raspberry Pi</strong> überträgt, welcher basierend auf dem 
+                        geschriebenen Code entscheidet, ob der <strong>Motor</strong> eingeschaltet oder gestoppt wird. 
+                        Da der <strong>Motor M1</strong> einen hohen Strom zieht, wurde eine separate Spannungsquelle für 
+                        den <strong>Motor</strong> hinzugefügt, während der <strong>Servomotor M2</strong> seine Energie 
+                        direkt vom <strong>Raspberry Pi</strong> beziehen kann. Zur Steuerung, wann die Batteriespannung 
+                        an den <strong>Motor</strong> angelegt wird, musste eine <strong>L293D</strong> Schaltung 
+                        verwendet werden, wobei der <strong>Minuspol</strong> als gemeinsame Masse geschaltet wurde, damit 
+                        die Schaltung funktioniert. Da die vom <strong>Raspberry Pi</strong> kommende Spannung von 
+                        <strong>3,3 Volt</strong> sowie der Strom nicht ausreichen, um drei <strong>LEDs</strong> 
+                        gleichzeitig zu betreiben, wurde ein <strong>NPN Transistor</strong> als Schalter hinzugefügt, 
+                        der eine geeignete Spannung und einen passenden Strom für die <strong>LEDs</strong> durchlässt, 
+                        ergänzt durch einen passenden Widerstand für jede <strong>LED</strong> sowie einen Basiswiderstand 
+                        am <strong>Transistor</strong> zur Bestimmung des Stromwerts und zum Schutz des <strong>Transistors</strong>.
+                    </p>
+                </div>
+
+                <h2>Feuerwehrfahrzeug :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/DGBNScYnIGs?si=3ERVLOC2O0CTUdq3" 
+                        title="Feuerwehrfahrzeug" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt ist ein Auto, das mit einer <strong>Kamera</strong> ausgestattet ist, die 
+                        <strong>Feuer</strong> erkennen kann. Wenn das Auto <strong>Feuer</strong> sichtet, schaltet 
+                        es die <strong>Notbeleuchtung</strong> auf seinem Dach ein und beginnt sich vorwärts zu bewegen. 
+                        Um sicherzustellen, dass das Auto nicht direkt in das <strong>Feuer</strong> fährt, wurde ein 
+                        <strong>Infrarotsensor</strong> hinzugefügt, der das Auto stoppt, sobald es sich dem 
+                        <strong>Feuer</strong> nähert, während die <strong>Bremslichter</strong> eingeschaltet werden. 
+                        Gleichzeitig wird <strong>Wasser</strong> in Form von Sprühnebel um das <strong>Feuer</strong> 
+                        herum gepumpt, um den Sauerstoff abzuschneiden und das <strong>Feuer</strong> zu löschen, während 
+                        das Auto eine <strong>E-Mail</strong> sendet, dass ein <strong>Feuer</strong> erkannt wurde.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/firecar_mec1.webp" alt="Feuerwehrfahrzeug" width="550">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Es gibt zwei <strong>Motoren</strong> und einen <strong>Getriebesatz</strong> zum Bewegen und 
+                        Lenken des Autos an den richtigen Ort; der <strong>Gleichstrommotor M1</strong> bewegt das Auto 
+                        vorwärts und rückwärts, während der <strong>Servomotor M2</strong> es nach rechts und links lenkt. 
+                        Darüber hinaus gibt es ein <strong>Wasserdampf</strong> beziehungsweise <strong>Wasserdrucksystem</strong>, 
+                        das aus einem <strong>Tank</strong> besteht, der zur Hälfte mit <strong>Wasser</strong> und zur anderen 
+                        Hälfte mit <strong>Druckluft</strong> gefüllt ist, unterstützt durch einen alten 
+                        <strong>Kühlschrankkompressor</strong>. Am Boden des <strong>Tanks</strong> befindet sich ein 
+                        <strong>hochdruckbeständiger Plastikschlauch</strong>, an dessen Ende ein <strong>Parfümflaschenkopf</strong> 
+                        angebracht ist, um das <strong>Wasser</strong> in <strong>Sprühnebel</strong> umzuwandeln. Zur Steuerung des 
+                        <strong>Wasseraustritts</strong> ist ein <strong>Ventil V1</strong> installiert, das von einem 
+                        <strong>Servomotor M3</strong> gesteuert wird. Das <strong>Wasserpumpsystem</strong> ist vollständig von der 
+                        elektrischen Schaltung isoliert, um deren Beschädigung im Falle eines Lecks zu verhindern.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/firecar_elec1.webp" alt="Feuerwehrfahrzeug" width="850">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die <strong>Kamera</strong> erfasst das <strong>Feuer</strong> und übermittelt die Informationen an den 
+                        <strong>Raspberry Pi</strong>, welcher die Notbeleuchtung mithilfe eines <strong>PNP Transistors</strong> 
+                        und einer <strong>astabilen Kippstufe</strong> einschaltet, die aus zwei <strong>Transistoren</strong>, 
+                        zwei <strong>Widerständen</strong> und zwei <strong>Kondensatoren</strong> mit sehr präzisen 
+                        Werten besteht, um die <strong>Lampen</strong> jede halbe Sekunde ein und auszuschalten. Das 
+                        System zur Erkennung der Nähe des <strong>Feuers</strong> zum Auto besteht aus einem 
+                        <strong>Infrarotsensor</strong> und einem <strong>LM358 Komparator</strong>, der das vom 
+                        <strong>Sensor</strong> kommende Signal mit einem über einen <strong>variablen Widerstand</strong> 
+                        ausgewählten Signal vergleicht, wodurch die <strong>Empfindlichkeit</strong> gesteuert werden kann, 
+                        der <strong>Komparator</strong> arbeitet hier im Sättigungsbereich, da der <strong>Raspberry Pi</strong> 
+                        keinen <strong>analogen Eingang</strong> besitzt. Da der <strong>Automotor</strong> einen hohen Strom 
+                        zieht, musste eine <strong>L293D</strong> Schaltung und eine separate Spannungsquelle installiert werden, 
+                        wobei sichergestellt werden muss, dass die gesamte Schaltung eine gemeinsame <strong>Masse</strong> 
+                        besitzt, um einen ordnungsgemäßen Betrieb zu gewährleisten.
+                    </p>
+                </div>
+
+                <h2>Fahrzeug mit Echtzeitsteurung :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container-vertical">
+                    <iframe src="https://www.youtube.com/embed/FH3dhNvI_Lc?si=et7iNRe8LRiPEGil" 
+                        title="Fahrzeug mit Echtzeitsteurung" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt ist ein <strong>ferngesteuertes Auto</strong> mit einer <strong>realistischen Steuerung</strong>, 
+                        die die Bedienung von <strong>Blinkern</strong>, <strong>Abblendlicht</strong> und <strong>Fernlicht</strong>, 
+                        <strong>rotem Rücklicht</strong> sowie <strong>Bremslichtern</strong> ermöglicht, zusätzlich zu 
+                        <strong>weißen Lichtern</strong> beim Rückwärtsfahren. Die Richtung des Autos kann über ein 
+                        <strong>echtes Lenkrad</strong> gesteuert werden, während für die Bewegung ein Gaspedal, eine <strong>Kupplung</strong> 
+                        und ein <strong>Gangschalthebel</strong> verwendet werden, da das Auto jedoch keine 
+                        <strong>echte Kupplung</strong> oder <strong>tatsächliches Getriebe</strong> besitzt, werden 
+                        diese im <strong>Code</strong> simuliert. Darüber hinaus wurde eine <strong>RGB LED</strong> 
+                        hinzugefügt, um den Verbindungsstatus mit dem Steuergerät anzuzeigen. Bei erfolgreicher 
+                        Verbindung leuchtet sie <strong>grün</strong>, bei getrennter Verbindung <strong>rot</strong> und 
+                        während der Suche nach dem Auto <strong>gelb</strong>.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/realcar_mec1.webp" alt="Fahrzeug mit Echtzeitsteurung" width="400">
+                    <img src="photo_proj_3/realcar_mec2.webp" alt="Fahrzeug mit Echtzeitsteurung" width="400">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Auto enthält einen <strong>Gleichstrommotor</strong> für den Antrieb und einen 
+                        <strong>Servomotor</strong> für die Lenkung nach rechts und links. Das Steuergerät ist 
+                        handgefertigt und basiert auf einem alten PlayStation Controller, dem <strong>Holpedale</strong>, 
+                        ein <strong>Plastiklenkrad</strong>, ein <strong>Schalthebel</strong> und verschiedene 
+                        <strong>Tasten</strong> zur Lichtsteuerung hinzugefügt wurden.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/realcar_elec1.webp" alt="Fahrzeug mit Echtzeitsteurung" width="700">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die Steuerung der <strong>Fahrzeugkomponenten</strong> erfolgt über einen 
+                        <strong>ESP8266 Mikrocontroller</strong>. Es wurden <strong>LEDs</strong> verschiedener Farben und 
+                        Anzahl verwendet, um ein echtes Auto zu simulieren, ergänzt durch einen <strong>NPN Transistor</strong>, 
+                        da die <strong>Lampen</strong> eine höhere Spannung und einen höheren Strom benötigen, als der 
+                        <strong>ESP8266</strong> bereitstellen kann. Für den Antrieb des Autos werden ein 
+                        <strong>Gleichstrommotor</strong> und eine externe Spannungsquelle in Form einer 
+                        <strong>Lithiumbatterie</strong> eingesetzt, um nicht nur ein einfaches Ein und Ausschalten zu 
+                        ermöglichen, sondern auch die Geschwindigkeit und Richtung zu steuern, musste eine 
+                        <strong>Pulsweitenmodulation</strong> verwendet werden. Durch Anpassung des Tastgrades kann die 
+                        Geschwindigkeit von <strong>null</strong> bis zur <strong>Höchstgeschwindigkeit</strong> geändert 
+                        werden, da die Drehzahl des <strong>Gleichstrommotors</strong> proportional zur Spannung ist. 
+                        Das <strong>PWM Signal</strong> geht an das Gate eines <strong>MOSFETs</strong>, wobei ein 
+                        <strong>N-Channel MOSFET</strong> verwendet wurde, da dieser bei hohen Frequenzen arbeiten kann 
+                        und im Vergleich zu einem <strong>BJT Transistor</strong> einen geringen Innenwiderstand aufweist. 
+                        Zur Steuerung der Drehrichtung des <strong>Motors</strong> wurden zwei <strong>Relais</strong> 
+                        eingesetzt, um die Polung des <strong>Motors</strong> zu vertreiben, während dasselbe Kabel, das 
+                        das <strong>Relais</strong> schaltet, gleichzeitig die weißen Rückfahrlichter einschaltet.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_3/realcar_elec2.webp" alt="Fahrzeug mit Echtzeitsteurung" width="700">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Für die Fernsteuerung des Autos wird ein <strong>ESP32</strong> benötigt, im Gegensatz zum 
+                        <strong>ESP8266</strong>, der nur wenige Ein und Ausgänge sowie einen einzigen analogen Eingang 
+                        besitzt, verfügt der <strong>ESP32</strong> über mehr Ein und Ausgänge und insbesondere analoge 
+                        Eingänge, und es gibt sogar zwei analoge Ausgänge, die in diesem Projekt jedoch nicht benötigt 
+                        werden. Die analogen Eingänge werden für das <strong>Lenkrad</strong>, die <strong>Kupplung</strong>, das 
+                        <strong>Gaspedal</strong> und den <strong>Schalthebel</strong> verwendet, da deren Werte in einem 
+                        Bereich von <strong>0</strong> bis <strong>4095</strong> variieren, im Gegensatz dazu werden die 
+                        <strong>Bremstaste</strong> und die <strong>Lichtschalter</strong> an digitale Eingänge 
+                        angeschlossen, um nur den Wert <strong>0</strong> oder <strong>1</strong> zu senden.
+                    </p>
+                </div>
+
+                <h2>Ferngesteuerter Zug :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="videos-row-vertical">
+                    <div class="video-container-vertical">
+                        <iframe src="https://www.youtube.com/embed/yYrdeZM5SBE?si=WIXIyWT3KgVZSlxF" 
+                            title="Zug" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+
+                    <div class="video-container-vertical">
+                        <iframe src="https://www.youtube.com/embed/52BrXKqV8xI?si=GwAy6qNleQkZv8RV"
+                            title="Zug" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Dieses Projekt ist ein Zug, der mithilfe eines anderen Projekts hergestellt wurde, nämlich einer 
+                        präzisen und schnellen <strong>CNC Maschine</strong>. Der Zug wird hinsichtlich seiner 
+                        <strong>Geschwindigkeit</strong> und <strong>Richtung</strong> ferngesteuert, zusätzlich zu der 
+                        Möglichkeit, die vorderen und hinteren <strong>Lichter</strong> einzuschalten.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/train_mec1.webp" alt="Zug" width="500">
+                    <img src="photo_proj_3/train_mec2.webp" alt="Zug" width="300">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Für den Antrieb des Zuges wurden ein <strong>Gleichstrommotor</strong> sowie ein 
+                        <strong>Schneckengetriebe</strong> und ein <strong>Zahnrad</strong> installiert, um eine 
+                        <strong>Drehmomentverstärkung</strong> zu gewährleisten, da der Platz begrenzt ist und ein 
+                        kleiner <strong>Motor</strong> verwendet wurde. Zwischen dem <strong>Drehgestell</strong> und dem 
+                        <strong>Zug</strong> besteht ein <strong>rotatorischer Freiheitsgrad</strong>, da das Gleis nicht 
+                        ideal ist und sich das <strong>Drehgestell</strong> in Kurven frei drehen muss. Die <strong>Räder</strong> 
+                        wurden nach dem Vorbild echter Züge hergestellt, um zu verhindern, dass sie aus dem 
+                        <strong>Gleis</strong> springen.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/train_elec1.webp" alt="Zug" width="600">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur Steuerung der Zugteile wurde eine Steuereinheit benötigt, und da weder der <strong>ESP32</strong> 
+                        noch der <strong>ESP8266</strong> aufgrund des begrenzten Platzes verwendet werden konnten, wurde 
+                        ein <strong>ESP8266 D1 Mini</strong> eingesetzt, der denselben <strong>Mikrocontroller</strong> wie 
+                        der <strong>ESP8266</strong> enthält, jedoch eine deutlich kleinere Bauform aufweist. Die Beleuchtung 
+                        besteht aus zwei Gruppen, von denen jede eine <strong>weiße Lampe</strong> und zwei 
+                        <strong>rote Lampen</strong> enthält, die <strong>weiße Lampe</strong> wird auf einer Seite platziert 
+                        und die beiden <strong>roten Lampen</strong> auf der gegenüberliegenden Seite, ebenso bei der anderen 
+                        Gruppe. Für den Antrieb des <strong>Motors</strong> wurde eine <strong>L293D</strong> Schaltung 
+                        verwendet, während die <strong>Lampen</strong> einen <strong>NPN Transistor</strong> zu ihrem 
+                        Betrieb benötigen. Zum Betrieb des Systems wurde eine Standard <strong>Lithiumbatterie</strong> 
+                        verwendet, deren Spannung bei voller Ladung <strong>4.2 Volt</strong> beträgt, da dieser Wert 
+                        für einen stabilen Betrieb nicht optimal ist, wurde ein aus einem alten Gerät ausgebauter 
+                        Spannungswandler eingesetzt, um die Spannung auf <strong>5 Volt</strong> zu erhöhen, damit der 
+                        <strong>ESP8266 D1 Mini</strong> einwandfrei arbeiten kann.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_3/train_elec2.webp" alt="Zug" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Steuergerät enthält einen Hebel ähnlich dem in echten Zügen zur Geschwindigkeitsregelung, 
+                        und das Bewegen desselben Hebels in die entgegengesetzte Richtung bewirkt die <strong>Bremsung</strong>, 
+                        sowie vier <strong>Tasten</strong>, zwei davon dienen zur Auswahl der Fahrtrichtung und die anderen 
+                        beiden zur Auswahl der zu betreibenden <strong>Lampen</strong>.
+                    </p>
+                </div>
+
+                <h2>Metalldetektor :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/29ifmjKIyJQ?si=jRxKwENAlxW5G_vy"
+                        title="Metalldetektor" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt ist eine Weiterentwicklung eines früheren <strong>Hindernisausweichroboters</strong>, dem ein 
+                        <strong>Metalldetektionssystem</strong> mit einer Reichweite von höchstens <strong>zwei Zentimetern</strong> 
+                        hinzugefügt wurde. Das Fahrzeug fährt normal, und bei der Entdeckung von <strong>Metall</strong> stoppt es, 
+                        fährt ein Stück zurück, gibt einen <strong>Warnton</strong> aus und schaltet ein <strong>rotes Licht</strong> 
+                        ein, während auf dem <strong>Display</strong> angezeigt wird, dass <strong>Metall</strong> entdeckt wurde.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/metaldetekt_mec1.webp" alt="Metalldetektor" width="440">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt enthält drei <strong>Motoren</strong>, zwei <strong>Gleichstrommotoren M1</strong> 
+                        und <strong>M2</strong> zum Bewegen und Lenken des Autos sowie einen dritten 
+                        <strong>Servomotor M3</strong>, der den <strong>Ultraschallsensor</strong> bewegt, um die 
+                        Umgebung zu scannen und Hindernisse zu erkennen.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/metaldetekt_elec1.webp" alt="Metalldetektor" width="700">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt enthält einen <strong>Gleichstrommotor M1</strong> zum Vorwärts und Rückwärtsbewegen 
+                        des Autos, einen <strong>Gleichstrommotor M2</strong> mit einem <strong>Getriebesystem</strong> 
+                        zum Lenken des Autos nach rechts und links sowie einen dritten <strong>Motor M3</strong> zum 
+                        Bewegen des <strong>Ultraschallsensors</strong>, zusätzlich zu dem 
+                        <strong>Metalldetektionssystem</strong>, das auf einer <strong>Spule</strong> und einem 
+                        <strong>Kondensator</strong> basiert, wobei der <strong>Arduino</strong> einen intermittierenden 
+                        Strom in die Schaltung einspeist und die Frequenz überwacht. Wenn sich <strong>Metall</strong> 
+                        der <strong>Spule</strong> nähert, werden <strong>Wirbelströme</strong> im <strong>Metall</strong> 
+                        erzeugt und die <strong>Induktivität</strong> der <strong>Spule</strong> verändert sich, wodurch 
+                        sich die Frequenz ändert, da ihr Wert mit den Werten des <strong>Kondensators</strong> und der 
+                        <strong>Spule</strong> zusammenhängt. Bei einer Frequenzänderung erkennt der <strong>Arduino</strong>, 
+                        dass sich <strong>Metall</strong> in der Nähe der <strong>Spule</strong> befindet.
+                    </p>
+                </div>
+
+                <h2>Hindernisdetektor :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container-vertical">
+                    <iframe src="https://www.youtube.com/embed/BSnjNAWu0eE?si=mEx3LtRpHEqBAkbr" 
+                        title="Hindernisdetektor" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Dieses Projekt ist ein Prototyp eines <strong>Hindernisausweichroboters</strong>, der sich vorwärts und 
+                        rückwärts bewegen und Hindernisse dank eines <strong>Ultraschallsensors</strong> erkennen kann, der eine 
+                        maximale Entfernung von <strong>vier Metern</strong> messen kann. Damit der Robot weiß, wohin er sich bei 
+                        der Erkennung eines Hindernisses drehen soll, dreht er nur den <strong>Sensor</strong> nach rechts und 
+                        misst die Entfernung, dreht ihn dann nach links und misst ebenfalls die Entfernung, vergleicht 
+                        anschließend beide Entfernungen und dreht sich in die Richtung, deren Entfernung größer ist.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/obstacle_mec1.webp" alt="Hindernisdetektor" width="400">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der Roboter verfügt über zwei <strong>Gleichstrommotoren</strong>, den <strong>Motor M1</strong> zum 
+                        Vorwärts und Rückwärtsbewegen und den <strong>Motor M2</strong> zum Lenken nach rechts und links, sowie 
+                        einen <strong>Servomotor M3</strong> zum Bewegen des <strong>Sensors</strong>, der die Entfernung misst. 
+                        Das Lenksystem ist vollständig handgefertigt und umfasst ein <strong>Getriebesystem</strong> zur Erhöhung 
+                        des <strong>Drehmoments</strong> sowie eine <strong>Feder</strong>, die die Räder automatisch wieder 
+                        in eine gerade Position zurückführt.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_3/obstacle_elec1.webp" alt="Hindernisdetektor" width="700">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Gehirn des Roboters ist ein <strong>Arduino Uno</strong>, zur Steuerung der beiden 
+                        <strong>Gleichstrommotoren M1</strong> und <strong>M2</strong> musste die Schaltung 
+                        <strong>L293D</strong> verwendet werden, die in der Lage ist, zwei <strong>Motoren</strong> 
+                        gleichzeitig so zu betreiben, dass sie voneinander isoliert sind, und ihre Stromversorgung 
+                        erfolgt durch eine <strong>Lithiumbatterie</strong>. Der <strong>Servomotor M3</strong> wird 
+                        direkt vom <strong>Arduino</strong> versorgt und über <strong>Pulsweitenmodulation</strong> 
+                        gesteuert. Der <strong>Ultraschallsensor</strong> enthält einen Draht für den Sender und einen 
+                        Draht für den Empfänger, der <strong>Arduino</strong> sendet einen <strong>Impuls</strong>, 
+                        woraufhin der <strong>Sensor</strong> eine <strong>Ultraschallwelle</strong> aussendet, und wenn 
+                        diese auf ein Hindernis prallt und zurückkehrt, wird sie vom Empfänger des <strong>Sensors</strong> 
+                        erkannt, der ein Signal an den <strong>Arduino</strong> sendet, welcher die Zeit zwischen dem 
+                        <strong>Senden</strong> des <strong>Impulses</strong> und seiner <strong>Rückkehr</strong> misst. 
+                        Mit einer einfachen Formel unter Verwendung der <strong>Schallgeschwindigkeit</strong> wird die 
+                        Zeit in eine Entfernung umgewandelt und dann durch zwei geteilt, da die Welle hin und her gegangen 
+                        ist, was bedeutet, dass sie die Strecke zweimal zurückgelegt hat.
+                    </p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>Kontakt & Links:</strong></p>
+                <div class="contact-links">
+                    <a href="mailto:mannaiachref9@gmail.com">📧 E-Mail</a>
+                    <a href="tel:+21627236313">📞 Tel</a>
+                    <a href="https://www.linkedin.com/in/achref-mannai-73324121a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/achrefmannai9" target="_blank">💻 GitHub</a>
+                </div>
+                <p class="copyright">© 2026 Achref | Alle Rechte vorbehalten</p>
+            </div>
+        </footer>
+    </body>
+</html>

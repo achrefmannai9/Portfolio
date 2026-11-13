@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Achref | Interaktive Roboter und IoT</title>
+        <link rel="icon" type="image/png" href="background/logo.webp">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="inner-page2">
+        <nav class="navbar">
+            <a href="index.html" class="logo"><strong>Startseite</strong></a>
+            <ul>
+                <li><a href="project0.html">Home</a></li>
+                <li><a href="project1.html">CNC</a></li>
+                <li class="active"><a href="#"><strong>Interaktiv Roboter</strong></a></li>
+                <li><a href="project3.html">Fahrzeug</a></li>
+                <li><a href="project4.html">Erste Projekte</a></li>
+            </ul>
+        </nav>
+        <header class="hero">
+            <div class="brand-container">
+                <h1>Interaktive Roboter und IoT</h1>
+            </div>
+        </header>
+        
+        <main>
+            <div class="main-project">
+                <h2>Assistenzroboter :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/9_oCYwEdRvY?si=5_YrlAcmEVqTinCb" 
+                        title="Assistenzroboter" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Bei diesem Roboter handelt es sich um einen <strong>interaktiven Roboter</strong>, der auf 
+                        Sprachbefehle reagieren und diese ausführen kann, wie zum Beispiel das Gehen, das Bewegen der 
+                        <strong>Hände</strong> und des <strong>Kopfes</strong> sowie das <strong>Beantworten</strong> 
+                        von Fragen. Er ist mit einer <strong>Kamera</strong> zur Objekterkennung ausgestattet und kann 
+                        den Benutzer an die Einnahmezeiten von <strong>Medikamenten</strong> oder an alles andere 
+                        erinnern, worauf er programmiert wird.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/chatbot_mec1.webp" alt="Assistenzroboter" width="300">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Dieser Roboter enthält zwei <strong>Motoren</strong>, die ihm das Gehen ermöglichen, sowie 
+                        jeweils einen <strong>Motor</strong> für jede Hand und einen <strong>Motor</strong> für den Kopf, 
+                        um diese bewegen zu können.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/chatbot_elec1.webp" alt="Assistenzroboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Für das Gehen wurden zwei <strong>Schrittmotoren</strong> verwendet sowie ein 
+                        <strong>Servomotor</strong> für die Hände und den Kopf. Zur Steuerung dieser <strong>Motoren</strong> 
+                        wurde ein <strong>Arduino Nano</strong> eingesetzt.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/chatbot_elec2.webp" alt="Assistenzroboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der Hauptcontroller dieses Roboters ist ein <strong>Raspberry Pi</strong>, an den eine 
+                        <strong>USB Kamera</strong> angeschlossen wurde, damit er sehen und Gegenstände erkennen kann. 
+                        Er kann weiterentwickelt werden, um auch Personen zu erkennen.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/chatbot_elec3.webp" alt="Assistenzroboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der <strong>Raspberry Pi</strong> verfügt über <strong>keinen analogen Eingang</strong>, 
+                        weshalb das <strong>Mikrofon</strong> an einen <strong>Adapter</strong> angeschlossen wurde, 
+                        der das <strong>analoge Signal</strong> über einen USB Anschluss in ein <strong>digitales Signal</strong> 
+                        umwandelt.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/chatbot_elec4.webp" alt="Assistenzroboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Für die <strong>Tonausgabe</strong> verfügt der <strong>Raspberry Pi</strong> über einen 
+                        Anschluss, jedoch ist das Signal schwach. Daher wurde ein <strong>Audioverstärker</strong> 
+                        durch das Hinzufügen eines <strong>Verstärkers</strong> vom Typ <strong>LM358</strong> sowie 
+                        eines <strong>Potentiometers</strong> zur Erhöhung und Verringerung der Lautstärke gebaut.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/chatbot_elec5.webp" alt="Assistenzroboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der <strong>Raspberry Pi</strong> und der <strong>Arduino</strong> sind über ein 
+                        <strong>USB Kabel</strong> verbunden, um die Stromversorgung zu gewährleisten und gleichzeitig 
+                        dem <strong>Raspberry Pi</strong> zu ermöglichen, Befehle an den <strong>Arduino</strong> 
+                        zu senden, welcher seinerseits die <strong>Motoren</strong> steuert. Die <strong>Motoren</strong> 
+                        wurden vom <strong>Raspberry Pi</strong> getrennt, um die Belastung desselben zu verringern, 
+                        da er die Bild und Tonverarbeitung durchführt.
+                    </p>
+                </div>
+
+                <h2>Intelligentes Haus :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/I0jC7cmsYkg?si=GrfoRPdBmYSol-Mc" 
+                        title="Intelligentes Haus" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Dieses <strong>Smart Home</strong> wird vollständig auf <strong>drei verschiedene Arten</strong> 
+                        gesteuert. Das Haus umfasst <strong>Innenbeleuchtung</strong>, <strong>Aussenbeleuchtung</strong>, 
+                        eine <strong>Tür</strong>, ein <strong>Fenster</strong>, einen <strong>Deckenventilator</strong> 
+                        sowie ein fortschrittliches <strong>Bewässerungssystem</strong>.
+                    </p>
+                    <p>
+                        <ul>
+                            <li>
+                                Die <strong>erste Methode</strong> erfolgt über eine <strong>Benutzeroberfläche</strong> 
+                                mit einem <strong>Bildschirm</strong> und <strong>Tasten</strong> zum Navigieren zwischen 
+                                den Hausbereichen und zur Auswahl der zu steuerten Komponente, wobei ein 
+                                <strong>Ein Schalter</strong> und ein <strong>Aus Schalter</strong> vorhanden sind.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <ul>
+                            <li>
+                                Die <strong>zweite Methode</strong> ist die <strong>Fernsteuerung</strong> über 
+                                <strong>WLAN</strong> und eine <strong>Benutzeroberfläche</strong> auf dem 
+                                <strong>Smartphone</strong> oder <strong>Computer</strong>, womit alles gesteuert 
+                                werden kann.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <ul>
+                            <li>
+                                Die <strong>dritte Methode</strong> besteht darin, dass das Haus 
+                                <strong>vollständig automatisiert</strong> wird, wobei <strong>Tür</strong>, 
+                                <strong>Beleuchtung</strong>, <strong>Ventilator</strong> und sogar die 
+                                <strong>Wasserpumpe</strong> mithilfe von <strong>Sensoren</strong> gesteuert werden.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hause_mec1.webp" alt="Intelligentes Haus" width="450">
+                    <img src="photo_proj_2/hause_mec2.webp" alt="Intelligentes Haus" width="400">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zum Öffnen und Schließen der <strong>Tür</strong> wurde ein <strong>Servomotor</strong> und ein 
+                        einfaches System verwendet. Auch das <strong>Fenster</strong> benötigt einen <strong>Servomotor</strong> 
+                        sowie ein komplexes System zur Umwandlung der Drehbewegung des <strong>Motors</strong> in eine 
+                        entgegengesetzte Gleitbewegung über Drähte, wodurch sich die beiden Fensterteile in 
+                        entgegengesetzte Richtungen bewegen.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hause_elec1.webp" alt="Intelligentes Haus" width="450">
+                    <img src="photo_proj_2/hause_elec2.webp" alt="Intelligentes Haus" width="250">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die <strong>manuelle Steuerung</strong> erfolgt über einen <strong>Bildschirm</strong> und 
+                        <strong>Tasten</strong> zum Navigieren zwischen den Hausbereichen und zur Steuerung von allem, 
+                        zusätzlich zur Anzeige von Informationen wie <strong>Temperatur</strong>, 
+                        <strong>Bodenfeuchtigkeit</strong> und dem <strong>Füllstand des Wassertanks</strong>. Das Gehirn 
+                        für all diese Befehle ist ein <strong>ESP32 Board</strong>, jedoch verfügt es über eine begrenzte 
+                        Anzahl von Ein und Ausgängen. Daher wurde anstelle der Verwendung von vielen Kabeln für den 
+                        Betrieb des <strong>Bildschirms</strong> ein <strong>I2C Modul</strong> hinzugefügt, das nur ein 
+                        <strong>Datenkabel</strong> und ein <strong>Taktkabel</strong> benötigt, wodurch die Steuerung des 
+                        <strong>Bildschirms</strong> über das <strong>I2C Protokoll</strong> erfolgt.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hause_elec3.webp" alt="Intelligentes Haus" width="300">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Sowohl die <strong>Tür</strong> als auch das <strong>Fenster</strong> benötigen jeweils einen 
+                        <strong>Servomotor</strong>, jedoch wurde ein <strong>PIR Sensor</strong> hinzugefügt, der die 
+                        Veränderung der <strong>Infrarotstrahlung</strong> von jedem lebendigen Körper wie einem Menschen 
+                        erfasst, um das <strong>automatische Öffnen</strong> der <strong>Tür</strong> zu ermöglichen, 
+                        sobald eine Person daran vorbeigeht. Ausserdem kann seine <strong>Empfindlichkeit</strong> so 
+                        eingestellt werden, dass er aus der Nähe oder aus der Ferne reagiert, und die <strong>Zeit</strong>, 
+                        in der die <strong>Tür</strong> vor dem automatischen Schliessen offen bleibt, lässt sich 
+                        ebenfalls steuern.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hause_elec4.webp" alt="Intelligentes Haus" width="300">
+                    <img src="photo_proj_2/hause_elec5.webp" alt="Intelligentes Haus" width="290">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Sowohl die <strong>Innenbeleuchtung</strong> als auch die <strong>Aussenbeleuchtung</strong> 
+                        verfügen über eine <strong>Glühlampe</strong> mit einer Betriebsspannung von <strong>zwölf Volt</strong>, 
+                        und auch der <strong>Ventilator</strong> arbeitet mit <strong>zwölf Volt</strong>. Da das 
+                        <strong>ESP32 Board</strong> weder diese Spannung noch den für ihren Betrieb geeigneten Strom 
+                        bereitstellen kann, wurde ein <strong>Relais</strong> verwendet, um die Hochspannung mit einer 
+                        schwachen Spannung zu steuern, zusätzlich zur optischen Trennung, da das <strong>Relaismodul</strong> 
+                        einen <strong>Optokoppler</strong> enthält.
+                    </p>
+                    <p>
+                        Für die automatische Steuerung des Einschaltens der Beleuchtung wird ein <strong>LDR Sensor</strong> 
+                        benötigt, dessen Widerstandswert sich je nach der <strong>Intensität</strong> des darauf 
+                        fallenden <strong>Lichts</strong> verändert. Für den <strong>Ventilator</strong> wurde ein 
+                        <strong>Temperatursensor</strong> installiert, sodass sich der <strong>Ventilator</strong> 
+                        einschaltet, wenn die <strong>Temperatur</strong> ansteigt und einen bestimmten Grenzwert 
+                        überschreitet.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hause_elec6.webp" alt="Intelligentes Haus" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der <strong>Pumpenmotor</strong> arbeitet mit einer Spannung von <strong>acht Volt</strong>, und 
+                        der Leistungsteil des Hauses wird mit <strong>zwölf Volt</strong> versorgt, weshalb die 
+                        Notwendigkeit bestand, einen <strong>Spannungsregler</strong> mit einem Wert von <strong>acht Volt</strong> 
+                        hinzuzufügen. Bei dieser Art von <strong>Tauchpumpen</strong> trat ein grosses Problem auf, das 
+                        in ihrer geringen Qualität liegt, da beim Einsetzen in das Wasser sofort Wasser in den 
+                        <strong>Motor</strong> eindringt und dieser durchbrennt. Daher wurde ein anderer <strong>Motor</strong> 
+                        beschafft und eine lange <strong>Welle</strong> zwischen dem <strong>Motor</strong> und der 
+                        <strong>Pumpe</strong> konstruiert, wodurch sich nur die <strong>Pumpe</strong> unter Wasser 
+                        befindet, während der <strong>Motor</strong> ferngehalten wird.
+                    </p>
+                    <p>
+                        Durch die Verwendung eines <strong>kapazitiven Sensors</strong>, der die Feuchtigkeit im Boden 
+                        erfasst, kann die <strong>Pumpe</strong> so gesteuert werden, dass sie bei Trockenheit des Bodens 
+                        arbeitet und bei steigender Feuchtigkeit automatisch stoppt, zusätzlich zum Hinzufügen eines 
+                        <strong>Sensors</strong>, der die Wassermenge im Tank misst.
+                    </p>
+                </div>
+
+                <h2>OTTO-Roboter :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Wdqnz1iGQlw?si=4uhK-vdcinzjYZGz" 
+                        title="OTTO-Roboter" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt ist ein <strong>Robot</strong>, der auf <strong>zwei Beinen</strong> gehen und 
+                        Hindernisse ausweichen kann.
+
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/otto_mec1.webp" alt="OTTO-Roboter" width="280">
+                    <img src="photo_proj_2/otto_mec2.webp" alt="OTTO-Roboter" width="550">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der Roboter bewegt seine Beine mithilfe von vier <strong>Servomotoren</strong>, wobei auf jeden 
+                        Fuss zwei <strong>Motoren</strong> entfallen, wodurch er gehen und tanzen kann.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/otto_elec1.webp" alt="OTTO-Roboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Gehirn dieses Roboters ist ein <strong>Arduino Nano Board</strong>, das vier <strong>Motoren</strong> 
+                        steuert. Der Roboter kann mithilfe eines <strong>Ultraschallsensors</strong> Hindernissen 
+                        ausweichen, und er wird aus der Ferne über ein <strong>Mobiltelefon</strong> mittels 
+                        <strong>Bluetooth</strong> gesteuert.
+                    </p>
+                </div>
+
+                <h2>Selbstbalancierender Roboter :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/mOaDLnABtP8?si=quVsM7AQzAoEAND2" 
+                        title="Selbstbalancierender Roboter" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Es wurde eine kleine Anpassung am <strong>interaktiven Roboter</strong> vorgenommen, um seine 
+                        Hand nach oben und unten zu bewegen und somit einen <strong>Ball</strong> entsprechend dem 
+                        gewünschten Abstand auszubalancieren.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/pid_mec1.webp" alt="Selbstbalancierender Roboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt besteht aus einer <strong>Roboterhand</strong>, die sich auf und ab bewegt und dabei 
+                        eine <strong>Platte</strong> mit einem <strong>Ball</strong> darauf bewegt, welcher einem 
+                        <strong>Ultraschallsensor</strong> gegenübersteht, der den Abstand präzise misst.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/pid_elec1.webp" alt="Selbstbalancierender Roboter" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der <strong>Sensor</strong> sendet den tatsächlichen Abstand an den <strong>Arduino</strong>, 
+                        welcher diesen mit dem über den variablen Widerstand ausgewählten Abstand vergleicht. Mithilfe 
+                        eines <strong>PID Reglers</strong> kann der Roboter den Ball <strong>schnell</strong>, 
+                        <strong>präzise</strong> und <strong>stabil</strong> ausbalancieren.
+                    </p>
+                </div>
+
+                <h2>Intelligente Hand :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/flBe6wipvaQ?si=eZmkC5dyCQ0UL__7" 
+                        title="Intelligente Hand" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt besteht aus einer <strong>Kamera</strong>, die die Hand sehen und deren Bewegung 
+                        verstehen kann, um eine <strong>Plastikhand</strong> entsprechend der Handbewegung vor der 
+                        <strong>Kamera</strong> zu bewegen.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hand_mec1.webp" alt="Intelligente Hand" width="250">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Die Hand enthält vier <strong>Servomotoren</strong> und einen <strong>Schrittmotor</strong> sowie 
+                        ein Drahtsystem für jeden Finger, sodass jeder Finger einzeln bewegt werden kann. Die Verwendung 
+                        eines <strong>Schrittsmotors</strong> war erforderlich, da kein fünfter <strong>Servomotor</strong> 
+                        verfügbar war.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/hand_elec1.webp" alt="Intelligente Hand" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Gehirn dieses Projekts ist ein <strong>Raspberry Pi Board</strong>, wobei eine 
+                        <strong>USB Kamera</strong>, vier <strong>Servomotoren</strong> und ein 
+                        <strong>Schrittmotor</strong> mit seinem dazugehörigen <strong>Treiber</strong> des Typs 
+                        <strong>ULN2003</strong> angeschlossen wurden.
+                    </p>
+                </div>
+
+                <h2>Roboterarm :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container-vertical">
+                    <iframe src="https://www.youtube.com/embed/HfiGhN1olh4?si=ehO_Nix_w5unp1Ou" 
+                        title="Roboterarm" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt ist ein <strong>Roboterarm</strong>, der am Ende einen <strong>Greifer</strong> zur 
+                        Aufnahme von Gegenständen und zu deren Platzierung an anderen Orten besitzt. Der Roboter kann auf 
+                        verschiedene Weisen gesteuert werden, darunter die Bedienung über <strong>physische Tasten</strong>, 
+                        die Fernsteuerung über ein <strong>Mobiltelefon</strong> oder seine <strong>Programmierung</strong>, 
+                        damit er automatisch arbeitet und bestimmte Bewegungen ausführt.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/arm_mec1.webp" alt="Roboterarm" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der Roboter enthält vier <strong>Motoren</strong>, darunter einen <strong>Schrittmotor</strong>, 
+                        zwei <strong>Servomotoren</strong> und einen <strong>Gleichstrommotor</strong>. Der Roboter besteht 
+                        zu hundert Prozent handgefertigt aus Holz, unter Hinzufügung eines Systems, das den <strong>Greifer</strong> 
+                        unabhängig von der Aufwärtsbewegung und Abwärtsbewegung des Arms stets <strong>parallel</strong> zum Boden hält.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/arm_mec2.webp" alt="Roboterarm" width="390">
+                    <img src="photo_proj_2/arm_mec3.webp" alt="Roboterarm" width="400">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Der gesamte Arm kann sich mithilfe des <strong>Servomotors M2</strong> nach oben und unten bewegen, während 
+                        sich nur die zweite Hälfte mithilfe des <strong>Servomotors M3</strong> bewegen kann.
+                    </p>
+                </div>
+
+                <hr class="pro-divider">
+
+                <div class="project-gallery">
+                    <img src="photo_proj_2/arm_mec4.webp" alt="Roboterarm" width="400">
+                    <img src="photo_proj_2/arm_mec5.webp" alt="Roboterarm" width="380">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur Bewegung des gesamten Roboters nach rechts und links wird ein drehmomentstarker <strong>Schrittmotor</strong> 
+                        mit geringer Geschwindigkeit und einem <strong>Getriebesystem</strong> eingesetzt. Zum Öffnen und Schließen des 
+                        <strong>Greifers</strong> wurden ein <strong>Gleichstrommotor</strong> und ein <strong>Getriebesystem</strong> 
+                        verwendet, das eine <strong>Schnecke</strong> enthält, wodurch sich der <strong>Greifer</strong> mit hoher 
+                        Präzision öffnen und schließen lässt.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/arm_elec1.webp" alt="Roboterarm" width="400">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur Steuerung der vier <strong>Motoren</strong> dient ein <strong>Arduino Nano Board</strong> als Steuereinheit. 
+                        Die beiden <strong>Servomotoren M2</strong> und <strong>M3</strong> benötigen jeweils nur ein Steuersignal per 
+                        <strong>Pulsweitenmodulation</strong>, während der <strong>Schrittmotor M1</strong> einen <strong>Treiber</strong> 
+                        wie den <strong>ULN2003</strong> erfordert, und für den <strong>Gleichstrommotor M4</strong> wird eine 
+                        <strong>L293D</strong> Treiberschaltung benötigt.
+                    </p>
+                </div>
+
+                <h2>Sortiersystem :</h2>
+                <h3>Projektüberblick :</h3>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/s6-bJ471MTE?si=ajDTMVDzM5TPwguf" 
+                        title="Sortiersystem" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="write">
+                    <p>
+                        Das Projekt ist ein Roboter, der <strong>Farben</strong> mithilfe einer <strong>Kamera</strong> 
+                        erkennen kann. Der Roboter verfügt über einen <strong>Arm</strong> und einen <strong>Greifer</strong>, 
+                        die sich nach rechts und links sowie nach oben und unten bewegen können, zusätzlich zum Öffnen und 
+                        Schließen des <strong>Greifers</strong>, um Teile aufzunehmen und sie je nach <strong>Farbe</strong> 
+                        am richtigen Ort zu platzieren.
+                    </p>
+                </div>
+
+                <h3>Mechanischer Aufbau :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/sortier_mec1.webp" alt="Sortiersystem" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur Bewegung des Systems nach rechts und links wird ein <strong>Gleichstrommotor</strong> mit einem 
+                        <strong>Riemenscheibensystem</strong> verwendet. Da der <strong>Gleichstrommotor</strong> seine genaue 
+                        Position im Gegensatz zum <strong>Schrittmotor</strong> nicht von Natur aus bestimmen kann und um das 
+                        Projekt zu vereinfachen sowie ohne <strong>Drehgeber</strong> auszukommen, wurden drei 
+                        <strong>Sensoren</strong> installiert, zwei zur Erkennung der <strong>Farbbereiche</strong> und ein 
+                        weiterer zur Bestimmung des <strong>Ablageortes</strong> der Teile. Die <strong>Sensoren</strong> 
+                        wurden anstelle von <strong>Drehgebern</strong> gewählt, da die Aufnahme und Ablageorte der Teile 
+                        fest und unveränderlich sind.
+                    </p>
+                </div>
+
+                <h3>Elektrische Steuerung :</h3>
+                <div class="project-gallery">
+                    <img src="photo_proj_2/sortier_elec1.webp" alt="Sortiersystem" width="500">
+                </div>
+
+                <div class="write">
+                    <p>
+                        Zur Steuerung des Roboters werden ein <strong>Raspberry Pi</strong> und eine <strong>USB Kamera</strong> 
+                        verwendet. Zur Regelung des Anhebens und Absenkens des Greifers wird ein <strong>Servomotor</strong> 
+                        eingesetzt, ebenso für das Öffnen und Schließen, während der <strong>Gleichstrommotor</strong> zur 
+                        Bewegung des gesamten Arms eine <strong>L293D</strong> Schaltung benötigt. Die <strong>Sensoren</strong> 
+                        sind an <strong>digitale</strong> Eingänge angeschlossen und wirken als <strong>Taster</strong>, bei 
+                        Betätigung durch den Arm wird eine Spannung von <strong>3,3 Volt</strong> an den <strong>Raspberry Pi</strong> 
+                        gesendet. Da der Signalwert im unbetätigten Zustand unbestimmt ist, wurde ein <strong>Widerstand</strong> zur 
+                        <strong>Masse</strong> eingesetzt, um den <strong>Pin</strong> mit <strong>null Volt</strong> zu verbinden.
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>Kontakt & Links:</strong></p>
+                <div class="contact-links">
+                    <a href="mailto:mannaiachref9@gmail.com">📧 E-Mail</a>
+                    <a href="tel:+21627236313">📞 Tel</a>
+                    <a href="https://www.linkedin.com/in/achref-mannai-73324121a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/achrefmannai9" target="_blank">💻 GitHub</a>
+                </div>
+                <p class="copyright">© 2026 Achref | Alle Rechte vorbehalten</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
