@@ -353,10 +353,10 @@ footer {
     }
 
     .video-container {
-        max-width: 100px;
+        max-width: 250px;
     }
     .video-container-vertical {
-        max-width: 250px;
+        max-width: 100px;
     }
 
     /* 2. إلغاء الهوامش اليسارية (50px) التي كانت تدفع المحتوى لليسار على الهاتف */
@@ -377,12 +377,12 @@ footer {
 
     /* 3. جعل النصوص مريحة للقراءة في المنتصف أو اليسار المناسب للهاتف */
     .home-project p, .write {
-        text-align: left;
+        text-align: justify;
     }
 
     /* 4. جعل العناوين الرئيسية والهيدر متناسقة */
     .hero h1, .hero h2 {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     .hero .subtitle {
