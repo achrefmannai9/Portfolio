@@ -325,35 +325,50 @@ footer {
 }
 
 /* ========================================================= */
-/* 📱 الاستجابة للهواتف والشاشات الصغيرة (Media Query) */
+/* 📱 حل مشكلة انحشار المحتوى في النصف الأيسر على الهواتف */
 /* ========================================================= */
 @media (max-width: 850px) {
-    /* إلغاء التثبيت الجانبي وتنسيق الصفحة عمودياً */
-
-    main, .content-container {
-        width: 100%;
-        margin-left: 0;
-        padding: 15px;
+    
+    /* 1. جعل حاوية المشاريع تأخذ عرض الشاشة كاملاً وتلغي أي هوامش جانبية */
+    .home-project {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
     }
 
-    main, .main-project {
-        width: 100%;
-        margin-left: 0;
+    /* 2. إلغاء الهوامش اليسارية (50px) عن كل عناوين ونصوص المشاريع على الهواتف */
+    .home-project h2, 
+    .home-project h3, 
+    .home-project h5, 
+    .home-project p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* تكيف خطوط الهيدر مع شاشة الهاتف */
-    .hero h1, .hero h2 {
-        font-size: 2rem;
+    /* 3. توسيط النصوص أو جعلها تتناسب مع شاشة الهاتف (اختياري: text-align: left أو center) */
+    .home-project p {
+        text-align: left !important; /* لتبقى مريحة للقراءة على الهاتف */
     }
 
-    .hero .subtitle {
-        font-size: 1.1rem;
+    /* 4. التأكد من أن صور المعرض تتوسط الشاشة ولا تسبب تمدد العرض */
+    .project-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100% !important;
+        margin: 15px 0 !important;
     }
 
-    .logo-dim {
-        width: 70px;
-        height: 70px;
+    .project-gallery img {
+        max-width: 100% !important;
+        height: auto !important;
     }
+}
 
     .main-project p {
         margin-left: 0;
