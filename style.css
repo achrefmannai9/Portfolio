@@ -319,14 +319,7 @@ footer {
 /* ========================================================= */
 @media screen and (max-width: 850px) {
     /* إلغاء التثبيت الجانبي وتنسيق الصفحة عمودياً */
-    .projects-container {
-        position: static;
-        max-width: 100%;
-        max-height: none;
-        margin: 20px auto;
-        padding: 0 15px;
-        overflow-y: visible;
-    }
+
 
     main, .content-container {
         margin-left: 0;
