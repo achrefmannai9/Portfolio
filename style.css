@@ -339,6 +339,7 @@ footer {
     }
 
     .navbar ul {
+        font-size: 10px;
         padding-left: 0;
         justify-content: center;
         flex-wrap: wrap;
@@ -346,8 +347,16 @@ footer {
     }
 
     .navbar ul li {
+        font-size: 10px;
         margin-left: 0;
         margin: 0 8px;
+    }
+
+    .video-container {
+        max-width: 100px;
+    }
+    .video-container-vertical {
+        max-width: 250px;
     }
 
     /* 2. إلغاء الهوامش اليسارية (50px) التي كانت تدفع المحتوى لليسار على الهاتف */
@@ -373,11 +382,11 @@ footer {
 
     /* 4. جعل العناوين الرئيسية والهيدر متناسقة */
     .hero h1, .hero h2 {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     .hero .subtitle {
-        font-size: 1.1rem;
+        font-size: 0.7rem;
     }
 
     /* 5. توسيط معرض الصور بالكامل داخل الشاشة */
