@@ -75,27 +75,27 @@ body.inner-page4 h2 {
 }
 
 .main-project h2, .main-project h3 {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     color: #1a1a1a;
 }
 
 .main-project p {
     color: #000000;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     width: 90%;
 }
 
 .home-project h2 {
     font-size: 2rem;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     color: #00f7ff;
 }
 .home-project h3 {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     color: #ffffff;
 }
 .home-project h5 {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     color: #ffffff;
 }
 .home-project p {
