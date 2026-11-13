@@ -339,24 +339,24 @@ footer {
     }
 
     .navbar ul {
-        font-size: 10px;
+        font-size: 15px;
         padding-left: 0;
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    .navbar ul li {
+    .navbar ul li a {
         font-size: 10px;
         margin-left: 0;
         margin: 0 8px;
     }
 
     .video-container {
-        max-width: 250px;
+        max-width: 280px;
     }
     .video-container-vertical {
-        max-width: 100px;
+        max-width: 180px;
     }
 
     /* 2. إلغاء الهوامش اليسارية (50px) التي كانت تدفع المحتوى لليسار على الهاتف */
@@ -382,7 +382,7 @@ footer {
 
     /* 4. جعل العناوين الرئيسية والهيدر متناسقة */
     .hero h1, .hero h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .hero .subtitle {
