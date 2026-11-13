@@ -325,33 +325,74 @@ footer {
 }
 
 
-/* حل جذري لتوسيط المحتوى وملء الشاشة على الهواتف */
+/* ========================================================= */
+/* 📱 التعديلات الشاملة والنهائية لتوافق الهواتف والشاشات الصغيرة */
+/* ========================================================= */
 @media (max-width: 850px) {
-    /* اجعل العنصر الحاوي الرئيسي يمتلئ بالكامل ويتوسط الشاشة */
-    body {
-        width: 100% !important;
-        overflow-x: hidden !important;
+    /* 1. إصلاح شريط التنقل ليناسب شاشة الهاتف */
+    .navbar {
+        width: 100%;
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+        box-sizing: border-box;
     }
 
-    /* إزالة أي هوامش يسارية تفوق عرض الهاتف وتزاحم المحتوى لليسار */
+    .navbar ul {
+        padding-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin: 0 8px;
+    }
+
+    /* 2. إلغاء الهوامش اليسارية (50px) التي كانت تدفع المحتوى لليسار على الهاتف */
     .home-project h2, 
     .home-project h3, 
     .home-project h5, 
-    .home-project p {
-        margin-left: 15px !important;
-        margin-right: 15px !important;
-        width: auto !important;
-        max-width: 100% !important;
-        text-align: left !important;
+    .home-project p,
+    .main-project h2, 
+    .main-project h3, 
+    .main-project p,
+    .write {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 
-    /* توسيط معرض الصور بالكامل وتجنب خروجه لليسار */
+    /* 3. جعل النصوص مريحة للقراءة في المنتصف أو اليسار المناسب للهاتف */
+    .home-project p, .write {
+        text-align: left;
+    }
+
+    /* 4. جعل العناوين الرئيسية والهيدر متناسقة */
+    .hero h1, .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* 5. توسيط معرض الصور بالكامل داخل الشاشة */
     .project-gallery {
         display: flex;
-        justify-content: center !important;
-        align-items: center !important;
-        margin: 10px auto !important;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
         width: 100% !important;
+        margin: 15px 0 !important;
+    }
+
+    .project-gallery img {
+        max-width: 90% !important;
+        height: auto;
     }
 }
 
