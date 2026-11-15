@@ -334,7 +334,6 @@ footer {
         width: 100%;
         padding: 15px 5%;
         /*flex-direction: column;*/
-        gap: 5px;
         box-sizing: border-box;
     }
 
@@ -343,7 +342,7 @@ footer {
         padding-left: 0;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 5px;
     }
 
     .navbar ul li a {
