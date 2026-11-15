@@ -339,7 +339,7 @@ footer {
     }
 
     .navbar ul {
-        font-size: 15px;
+        font-size: 20px;
         padding-left: 0;
         justify-content: center;
         flex-wrap: wrap;
@@ -347,7 +347,7 @@ footer {
     }
 
     .navbar ul li a {
-        font-size: 10px;
+        font-size: 20px;
         margin-left: 0;
         margin: 0 8px;
     }
