@@ -280,7 +280,7 @@ a {
 @media (max-width: 786px) {
     /* تصغير هوامش الصفحة العامة لتناسب الشاشات الصغيرة */
     .navbar {
-        padding: 20px 5%;
+        padding: 15px 5%;
         position: fixed;
     }
 
@@ -289,7 +289,7 @@ a {
     }
 
     .navbar ul {
-        gap: 65px;
+        gap: 1px;
     }
 
     .navbar ul li a {
