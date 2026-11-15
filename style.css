@@ -352,6 +352,10 @@ footer {
         margin: 0 8px;
     }
 
+    .navbar .logo {
+        font-size: 20px;
+    }
+
     .video-container {
         max-width: 280px;
     }
