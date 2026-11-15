@@ -334,7 +334,6 @@ footer {
         width: 100%;
         padding: 15px 5%;
         /*flex-direction: column;*/
-        box-sizing: border-box;
     }
 
     .navbar ul {
