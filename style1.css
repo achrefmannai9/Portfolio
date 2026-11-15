@@ -291,6 +291,10 @@ a {
         font-size: 10px;
     }
 
+    .navbar .logo {
+        font-size: 20px;
+    }
+
     /* جعل أقسام الموقع تعرض العناصر فوق بعضها عمودياً بدلاً من جنب لجنب */
     .home {
         flex-direction: column-reverse;
