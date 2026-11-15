@@ -282,11 +282,14 @@ a {
     .navbar {
         padding: 20px 5%;
         position: fixed;
-        gap: 5px
     }
 
     .navbar a {
         font-size: 15px;
+    }
+
+    .navbar ul {
+        gap: 5px;
     }
 
     .navbar ul li a {
